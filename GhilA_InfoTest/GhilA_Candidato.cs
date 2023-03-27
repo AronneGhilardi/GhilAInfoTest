@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GhilA_InfoTest
 {
-    internal class GhilA_Candidato
+    abstract class GhilA_Candidato
     {
         private int _GhilA_Matricola;
         private string _GhilA_Nome;
@@ -43,28 +43,8 @@ namespace GhilA_InfoTest
             _GhilA_Nome = s;
         }
 
-        abstract bool isIdoneo(string nome)
-        {
-            if (nome != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public abstract bool isIdoneo();
 
-        abstract int punteggio(string nome)
-        {
-            if (nome != null)
-            {
-                return 0;
-            }
-            else
-            {
-                return 1;
-            }
-        }
+        public abstract int punteggio();
     }
 }

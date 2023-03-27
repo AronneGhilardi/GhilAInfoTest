@@ -62,6 +62,12 @@ namespace GhilA_InfoTest
             _GhilA_Lode = false;
         }
 
+        public GhilA_Disoccupato(int voto, bool lode)
+        {
+            GhilA_Voto = voto;
+            GhilA_Lode = lode;
+        }
+
         public override int punteggio()
         {
             int a = (GhilA_Voto * 100) / 110;

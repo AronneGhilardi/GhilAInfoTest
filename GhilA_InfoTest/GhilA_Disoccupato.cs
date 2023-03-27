@@ -78,6 +78,7 @@ namespace GhilA_InfoTest
             return a;
         }
 
+
         public override bool isIdoneo()
         {
             if(punteggio() >= 72)

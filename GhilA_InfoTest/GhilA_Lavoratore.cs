@@ -56,5 +56,49 @@ namespace GhilA_InfoTest
                 return false;
             }
         }
+
+
+        public override string ToString()
+        {
+            string s = Matricola + ", " + Nome + ", " + GhilA_Esperienze;
+            return s;
+        }
+
+        public bool Equals(GhilA_Lavoratore x)
+        {
+            if (x == null)
+            {
+                return false;
+            }
+            if (this == x)
+            {
+                return true;
+            }
+            if (this.Matricola == x.Matricola || this.Nome == x.Nome || this.GhilA_Esperienze == x.GhilA_Esperienze)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool CompareTo(GhilA_Lavoratore x)
+        {
+            if (this.punteggio() == x.punteggio())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return (Matricola, Nome, GhilA_Esperienze).GetHashCode();
+        }
     }
 }

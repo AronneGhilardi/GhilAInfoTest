@@ -46,5 +46,49 @@ namespace GhilA_InfoTest
         public abstract bool isIdoneo();
 
         public abstract int punteggio();
+
+
+        public override string ToString()
+        {
+            string s = Matricola + ", " + Nome;
+            return s;
+        }
+
+        public bool Equals(GhilA_Candidato x)
+        {
+            if (x == null)
+            {
+                return false;
+            }
+            if (this == x)
+            {
+                return true;
+            }
+            if (this.Matricola == x.Matricola || this.Nome == x.Nome)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }    
+        }
+
+        public bool CompareTo(GhilA_Candidato x)
+        {
+            if (this.punteggio() == x.punteggio())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return (Matricola, Nome).GetHashCode();
+        }
     }
 }

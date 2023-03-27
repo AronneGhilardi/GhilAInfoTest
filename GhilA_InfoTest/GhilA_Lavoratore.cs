@@ -84,15 +84,23 @@ namespace GhilA_InfoTest
             }
         }
 
-        public bool CompareTo(GhilA_Lavoratore x)
+        public int CompareTo(GhilA_Lavoratore other)
         {
-            if (this.punteggio() == x.punteggio())
+            if (other == null)
             {
-                return true;
+                return 1;
+            }
+            if (this.punteggio() == other.punteggio())
+            {
+                return 0;
+            }
+            else if (this.punteggio() < other.punteggio())
+            {
+                return -1;
             }
             else
             {
-                return false;
+                return 1;
             }
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GhilA_InfoTest
 {
-    abstract class GhilA_Candidato
+    public abstract class GhilA_Candidato
     {
         private int _GhilA_Matricola;
         private string _GhilA_Nome;
